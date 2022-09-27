@@ -7,6 +7,8 @@ namespace NullableTypes
         static void Main(string[] args)
         {
             DateTime? date = null;
+            // We need to use GetValueOrDefault in this case
+            DateTime date2 = date.GetValueOrDefault();
 
             Console.WriteLine(date.GetValueOrDefault());
             Console.WriteLine(date.HasValue);
