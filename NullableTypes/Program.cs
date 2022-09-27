@@ -7,14 +7,9 @@ namespace NullableTypes
         static void Main(string[] args)
         {
             DateTime? date = null;
-            // We need to use GetValueOrDefault in this case
-            DateTime date2 = date.GetValueOrDefault();
+            DateTime date2 = date ?? DateTime.Now;
 
-            Console.WriteLine(date.GetValueOrDefault());
-            Console.WriteLine(date.HasValue);
-            
-            // This one gonna have an exception because the value is null
-            Console.WriteLine(date.Value);
+            Console.WriteLine(date2);
         }
     }
 }
